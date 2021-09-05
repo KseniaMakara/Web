@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <div id="app">
+        <div>
+            <label> Number 1 
+                <input type="text" v-model.number = "num1">
+            </label>
+        </div>
+        <div>
+            <label> Number 2 
+                <input type="text" v-model.number = "num2">
+            </label>
+        </div>
+        <div>
+            <button v-on:click = "summa">
+                Summ
+            </button>
+            <button v-on:click = "minus">
+                Minus
+            </button>
+            <button v-on:click = "dob">
+                Product
+            </button>
+            <button v-on:click = "dil">
+                Division
+            </button>
+        </div>
+        <div>
+            <label> 
+                Result
+                <input type="text" :value = "res">
+            </label>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                num1:0,
+                num2:0,
+                res: 0
+            }, 
+            methods: {
+                summa: function(){
+                    this.res = this.num1+this.num2
+                },
+                dob: function(){
+                    this.res = this.num1*this.num2
+                },
+                dil: function(){
+                    this.res = this.num1/this.num2
+                },
+                minus: function(){
+                    this.res = this.num1-this.num2
+                }
+            }
+        })
+    </script>
+    
+    
+
+    
+</body>
+</html>
