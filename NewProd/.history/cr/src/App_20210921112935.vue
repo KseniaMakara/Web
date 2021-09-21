@@ -1,0 +1,46 @@
+<template>
+  <div>
+    <clients-card name="aaaa" :credit="56" :balance="78"/>
+    
+  </div>
+</template>
+
+<script>
+import ClientsCard from "@/components/ClientsCard";
+export default {
+  components: {
+    ClientsCard,
+  },
+  
+  data() {
+    return {
+      clients: [
+        {
+          name:'Ivan',
+          credit:565,
+          balance:65
+
+        },
+                {
+          name:'Ivan',
+          credit:565,
+          balance:65
+
+        },
+      ],
+    }
+  },
+  methods: {
+    addClient() {
+      this.clients.push({
+        id: new Date().getTime(),
+        name: this.name,
+        credit: this.credit,
+        balance: this.balance,
+      });
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped></style>
