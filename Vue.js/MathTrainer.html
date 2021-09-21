@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <div id="app">
+        <div>
+            <label>
+                Number1:
+                <input type="number" v-model.number = "n1">
+            </label>
+        </div>
+        <div>
+            <label>
+                Number2:
+                <input type="number" v-model.number = "n2">
+            </label>
+        </div>
+        <div>
+            <label>
+                Enter your answer:
+                <input type="number" v-model.number = "answer">
+            </label>
+        </div>
+        <button style="background-color: red;" @click = "newTaskGeneration">
+            Check
+        </button>
+        <div>
+            <label> 
+                Correct 
+                <input type="number" :value.number = "NumberOfCorrect">
+                Incorrect 
+                <input type="number" :value.number = "NumberOfIncorrect">
+            </label>
+            
+        </div>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data:{
+                    n1:Math.floor(Math.random()*10),
+                    n2:Math.floor(Math.random()*10),
+                    answer:null,
+                    NumberOfCorrect:0,
+                    NumberOfIncorrect:0
+                },
+                methods:({
+                    RandomDigit(){
+                       return Math.floor(Math.random()*10)
+                    },
+                    newTaskGeneration(){
+                        this.Checking()
+                        this.n1 = this.RandomDigit()
+                        this.n2 = this.RandomDigit()
+                        this.answer = ''
+                    },
+                    Checking(){
+                        if (this.n1+this.n2===this.answer)
+                             this.NumberOfCorrect+=1
+                        
+                        else 
+                             this.NumberOfIncorrect+=1
+                    }
+                })
+            })
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CheckGay.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
+</head>
+<body>
+    <div class="quiz">
+        <div class="text">
+            <label><b>Colour of your underwear?</b> <br>
+                <input type="text"> <br>
+            </label>
+            <label> <b>Dorian or Cullen?</b><br>
+                <input type="text"> <br>
+            </label>
+            <label> <b>Orochimaru or Gaara?</b> <br>
+                <input type="text"> <br>
+                 </label>
+            <label> <b>Who is your spirit animal? </b>  <br>
+                <input type="text"> <br>
+            </label>
+        </div>
+    <div id="app">
+            <div class="butt1">
+                <button @click = "checkGay">
+                    Check!
+                </button>
+            </div>
+            <div class="gay">
+                <label>
+                    Your gayness:
+                    {{gaynessPercent}}
+                </label>
+            </div>
+    </div>
+  
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                gaynessPercent:null,
+            },
+            methods:{
+                checkGay(){
+                    this.gaynessPercent=Math.floor(Math.random()*100) +"%"
+                }
+
+            }
+        })
+    </script>
+    
+</body>
+</html>

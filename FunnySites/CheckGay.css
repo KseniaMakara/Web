@@ -1,0 +1,49 @@
+body{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(https://www.teahub.io/photos/full/122-1225349_lgbt-pride-wallpaper-rainbow-flag-wallpaper-love.jpg);
+}
+.quiz{
+    background-color: rgba(0, 0, 0, 0.739);
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 250px;
+    left: 800px;
+}
+.text{
+    size: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 25px;
+    left: 20px;
+    flex-direction: column;
+ 
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    word-spacing: 9px;
+    color: seashell;
+}
+.butt__text{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.butt1 button{
+    height: 75px;
+    width: 250px;
+    position: absolute;
+    margin-top: 50px;
+    left: 25px;
+    font-size: large;
+}
+.gay{
+    position: absolute;
+    width: 150px;
+    margin-top: 180px;
+    left: 25px;
+    background-color: seashell;
+}

@@ -1,3 +1,68 @@
-.table{
-    margin: 5px, 10px, 5px, 5px;
-    }
+.wrapper {
+    display: flex;
+    padding: 100%;
+    background: url(Abp7bZ6zcfKqcCd03ZidSD_ASWw1jEaj9EExUbtTT94.jpg) no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -moz-background-size: 100%; 
+    -webkit-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%;
+    width: 100%;
+}
+.table {
+    width:25%;
+    background:rgba(64, 10, 126, 0.534);
+    border: blueviolet solid 1px;
+    overflow-x: auto;
+    
+  }
+.video{
+    width: 50%;
+    top: 0%;
+    right: 2%;
+}
+.complex{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    left: 75%;
+    width: 100%;
+}
+.table table td{
+    border: solid blueviolet 1px;
+    background-color: rgba(137, 43, 226, 0.418);
+    color: rgb(255, 255, 255);
+}
+.dorian
+{
+    position: absolute;
+    top: 13%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.ph1, 
+.ph2,
+.ph3{
+    width: 25%;
+}
+.textbox {
+    background-color:rgba(137, 43, 226, 0.466) ;
+    color: rgb(255, 255, 255);
+    overflow-x: auto;
+    border: solid blueviolet 1px;
+    position: absolute;
+    top: 13%;
+    right: 25%;
+    left: 27%;
+    right: 23%;
+    display: flex;
+    flex-direction: column;
+}
+.grapes{
+    color: rgb(64, 11, 85);
+}

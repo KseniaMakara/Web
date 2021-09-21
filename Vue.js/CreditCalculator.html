@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <div id="app">
+        <div>
+            <label> 
+                Loan amount:
+                <input type="text" v-model.number = "loan">
+            </label>
+        </div>
+        <div>
+            <label> 
+                Loan term in years:
+                <input type="text" v-model.number = "terms">
+            </label>
+        </div>
+        <div>
+            <label> 
+                Interest rate per year:
+                <input type="text" v-model.number = "rate">
+            </label>
+        </div>
+        <button v-on:click = "Calculate">
+            Your percentage is:
+        </button>
+        <div>
+            <label>
+                Percentage:
+                <input type="text" :value = "percent">
+            </label>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                loan:0,
+                terms:0,
+                rate:0,
+                percent:0
+            },
+            methods: {
+                Calculate: function(){
+                    this.percent = this.loan*this.rate/100*this.terms
+                }
+            }
+        })
+    </script>
+</body>
+</html>
